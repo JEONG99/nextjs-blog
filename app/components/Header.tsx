@@ -12,18 +12,18 @@ export default function Header() {
       <Link href="/">
         <span
           className={clsx(
-            "text-5xl font-medium",
+            "text-5xl font-semibold",
             pathname === "/" ? "text-rose-500" : "text-white",
           )}
         >
           Home
         </span>
       </Link>
-      <Link href="/list">
+      <Link href="/post">
         <span
           className={clsx(
-            "text-5xl font-medium",
-            pathname === "/list" ? "text-rose-500" : "text-white",
+            "text-5xl font-semibold",
+            pathname.startsWith("/post") ? "text-rose-500" : "text-white",
           )}
         >
           Post

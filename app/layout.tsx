@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../app/styles/globals.css";
-import { ubuntu } from "./styles/fonts";
+import { notoSansKR } from "./styles/fonts";
+import Header from "./components/Header";
 
 export const metadata: Metadata = {
   title: "Jeongbaang Blog",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>{children}</body>
+      <body className={notoSansKR.className + " min-h-screen bg-slate-200"}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
